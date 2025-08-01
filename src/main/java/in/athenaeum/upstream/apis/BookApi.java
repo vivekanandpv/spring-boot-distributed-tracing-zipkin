@@ -1,6 +1,6 @@
-package io.anviksha.springbootmicroservicesresiliencepatterns.apis;
+package in.athenaeum.upstream.apis;
 
-import io.anviksha.springbootmicroservicesresiliencepatterns.models.Book;
+import in.athenaeum.upstream.models.Book;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 @RestController
-@RequestMapping("api/v1/downstream/books")
+@RequestMapping("api/v1/upstream/books")
 public class BookApi {
     private final RestTemplate restTemplate;
     private final Logger logger;
@@ -33,8 +33,8 @@ public class BookApi {
 
     @GetMapping
     public ResponseEntity<Map<String, String>> get() {
-        logger.info("Incoming request in {} for /api/v1/downstream/books ", applicationName);
-        ResponseEntity<Book> responseEntity = restTemplate.getForEntity("/api/v1/upstream/books", Book.class);
+        logger.info("Incoming request in {} for /api/v1/upstream/books ", applicationName);
+        ResponseEntity<Book> responseEntity = restTemplate.getForEntity("/api/v1/downstream/books", Book.class);
         return ResponseEntity.ok(Map.of("book", responseEntity.getBody().toString()));
     }
 

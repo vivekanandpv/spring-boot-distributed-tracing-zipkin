@@ -8,7 +8,7 @@
         <version>3.2.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>io.anviksha</groupId>
+    <groupId>in.athenaeum</groupId>
     <artifactId>spring-boot-distributed-tracing-zipkin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-distributed-tracing-zipkin</name>

@@ -1,4 +1,4 @@
-package io.anviksha.upstreamservice.models;
+package in.athenaeum.upstream.models;
 
 public class Book {
     private int id;
@@ -58,3 +58,4 @@ public class Book {
                 '}';
     }
 }
+

@@ -1,10 +1,10 @@
-package io.anviksha.springbootmicroservicesresiliencepatterns;
+package in.athenaeum.upstream;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootMicroservicesResiliencePatternsApplicationTests {
+class UpstreamApplicationTests {
 
     @Test
     void contextLoads() {

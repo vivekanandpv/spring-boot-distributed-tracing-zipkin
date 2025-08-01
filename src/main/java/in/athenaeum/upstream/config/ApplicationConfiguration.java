@@ -1,4 +1,4 @@
-package io.anviksha.springbootmicroservicesresiliencepatterns.config;
+package in.athenaeum.upstream.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -11,7 +11,7 @@ public class ApplicationConfiguration {
     private final String upstreamUrl;
     private final RestTemplateBuilder restTemplateBuilder;
 
-    public ApplicationConfiguration(@Value("${app.upstream.url}") String upstreamUrl, RestTemplateBuilder restTemplateBuilder) {
+    public ApplicationConfiguration(@Value("${app.downstream.url}") String upstreamUrl, RestTemplateBuilder restTemplateBuilder) {
         this.upstreamUrl = upstreamUrl;
         this.restTemplateBuilder = restTemplateBuilder;
     }

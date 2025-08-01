@@ -1,0 +1,15 @@
+Ensure that the port 9411 is not being used
+
+To run using docker:
+docker-compose up -d
+
+To run using zipkin jar:
+Download the jar from (Java > Latest Releases): https://zipkin.io/pages/quickstart.html
+java -jar zipkin-server-<version>-exec.jar
+
+UI is available at: http://localhost:9411
+Click on + icon, select: serviceName=upstream-service, run query
+
+Resources:
+https://zipkin.io/pages/architecture.html
+https://zipkin.io/pages/tracers_instrumentation.html
